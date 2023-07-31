@@ -20,19 +20,19 @@ The goal of the project was to create a messaging application for users to be ab
 
 #### This threat model was done following the PASTA framework
 
-1. Preparation Phase:
+## 1. Preparation Phase:
 
-### Identified assets:
+#### Identified assets:
 
 User data, chat messages, JWT tokens, MongoDB database, server infrastructure.
 
-### Actors:
+#### Actors:
 
 End-users, administrators, potential attackers.
 
-2. Elicitation Phase:
+## 2. Elicitation Phase:
 
-### Use cases identified:
+#### Use cases identified:
 
 User registration and login
 
@@ -40,7 +40,7 @@ chat message submission and retrieval
 
 admin functions
 
-### Threats and vulnerabilities identified:
+#### Threats and vulnerabilities identified:
 
 Cross-Site Scripting (XSS) attacks on chat messages and user inputs.
 
@@ -54,7 +54,7 @@ Data leakage through insecure logging and error handling.
 
 Denial-of-Service (DoS) attacks on the server infrastructure.
 
-3. Analysis Phase:
+## 3. Analysis Phase:
 
 Impact and likelihood of threats assessed to determine risk ratings.
 
@@ -64,7 +64,7 @@ Medium-risk threats: Brute force attacks, insider threats, DoS attacks.
 
 Low-risk threats: Data leakage, insecure JWT storage.
 
-4. Plan Phase:
+## 4. Plan Phase:
 
 Risk mitigation strategies identified:
 
@@ -84,19 +84,19 @@ Regularly update dependencies to avoid known vulnerabilities.
 
 Properly log and handle errors to avoid data leakage.
 
-5. Tracking Phase:
+## 5. Tracking Phase:
 
 Actions taken to address identified threats and vulnerabilities.
 
 Incident response plan prepared to handle security breaches.
 
-6. Attack Phase:
+## 6. Attack Phase:
 
 Threat agents launch attacks based on identified vulnerabilities.
 
 Security measures are in place help resist or mitigate attacks.
 
-7. Adaptation Phase:
+## 7. Adaptation Phase:
 
 Continuous review and update of the threat model.
 
