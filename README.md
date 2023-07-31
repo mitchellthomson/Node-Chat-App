@@ -10,13 +10,13 @@ navigate to the root run `npm start`
 
 this ensures both the client and server are running and will let you have access to the application and the database.
 
-## Project
+# Project
 
 This is a chatting application made using Nodejs with a Mongodb Database.
 
 The goal of the project was to create a messaging application for users to be able to talk 1 on 1 or within a group setting. My goal was to learn first more about webapp development especially from a more responsive front end. As well how is security done on something we use every day (messaging applications). While this is a beginner approach there are several security methods in place and still being implemented. This project was done while going through 2 different security courses each with a slightly different pace.
 
-## Threat Model
+# Threat Model
 
 #### This threat model was done following the PASTA framework
 
@@ -24,11 +24,11 @@ The goal of the project was to create a messaging application for users to be ab
 
 #### Identified assets:
 
-User data, chat messages, JWT tokens, MongoDB database, server infrastructure.
+User data, chat messages, JWT tokens, MongoDB database
 
 #### Actors:
 
-End-users, administrators, potential attackers.
+End-users, potential attackers.
 
 ## 2. Elicitation Phase:
 
@@ -38,21 +38,15 @@ User registration and login
 
 chat message submission and retrieval
 
-admin functions
-
 #### Threats and vulnerabilities identified:
 
 Cross-Site Scripting (XSS) attacks on chat messages and user inputs.
 
 Cross-Site Request Forgery (CSRF) attacks on sensitive operations.
 
-Brute force attacks on user passwords.
-
 Insider threats or unauthorized access by authenticated users.
 
 Data leakage through insecure logging and error handling.
-
-Denial-of-Service (DoS) attacks on the server infrastructure.
 
 ## 3. Analysis Phase:
 
@@ -60,9 +54,9 @@ Impact and likelihood of threats assessed to determine risk ratings.
 
 High-risk threats: XSS, CSRF.
 
-Medium-risk threats: Brute force attacks, insider threats, DoS attacks.
+Medium-risk threats: DoS attacks.
 
-Low-risk threats: Data leakage, insecure JWT storage.
+Low-risk threats: Data leakage, insecure JWT storage, Brute force attacks, insider threats
 
 ## 4. Plan Phase:
 
@@ -98,7 +92,7 @@ Continuous review and update of the threat model.
 
 Address new threats and evolving risks.
 
-## Security Implementations
+# Security Implementations
 
 I wanted to focus on primarily the OWASP top 10 as my introduction to this I have added some security measures for these (with some still being implemented/fixed) as well as other small security measures I think may be important.
 
