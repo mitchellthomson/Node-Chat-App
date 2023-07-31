@@ -1,0 +1,7 @@
+node_modules/
+
+.DS_*
+**/*.backup.*
+**/*.back.*
+
+node_modules
