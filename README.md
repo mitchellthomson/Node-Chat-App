@@ -72,11 +72,7 @@ Implement parameterized queries and input validation to prevent injection attack
 
 Use Content Security Policy (CSP) to mitigate XSS vulnerabilities.
 
-Implement CSRF tokens to protect against CSRF attacks.
-
 Enforce strong password policies and implement account lockouts for brute force protection.
-
-Securely store JWT tokens on the client-side with HttpOnly and Secure flags for cookies.
 
 Use rate limiting and DoS protection mechanisms to mitigate DoS attacks.
 
@@ -118,4 +114,8 @@ The second piece is implementing JWT tokens(JSON web tokens). JWT tokens are sta
 
 For validating my tokens I am using auth middleware, adding an extra layer that helps make sure only authorized users are interacting with sensitive information, by essentially having a central location where these checks happen as well as helping me learn better security practices.
 
-The chat app also has other inclusions for Data integrity including the two above, HTTPS is implemented (_currently issues but will fix_) to help ensure better data integrity as well as an extra layer for man in the middle attacks. I have implemented error handling that does not expose extra information or overly specific error codes to the user.
+### Extra Pieces
+
+The chat app also has other inclusions for Data integrity including the two above, HTTPS is implemented (_currently issues but will fix_) to help ensure better data integrity as well as an extra layer for man in the middle attacks. I have implemented error handling that does not expose extra information or overly specific error codes to the user. I also tried my best to follow the idea of Flat Promise Chains, to help with the readability, error handling but most importantly useful for asynch programming which can be a useful tool against dos attacks since it will avoid blocking threads. This app used mainly very popular very well maintained libraries, so it is rather helpful that if a vulnerability does come it will be quickly maintained and fixes will be put in place.
+
+I am aware that all these pieces together still leave gaps, but as a learning project there was lots of different choices made and changed constantly and some are still being changed now. Its also important to note that none of these individually will solve any of the one attack they help with, it is a required effort from all the implementations plus new ones that are added as the project shifts.
